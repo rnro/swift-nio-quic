@@ -10,8 +10,10 @@ on:
 jobs:
   soundness:
     name: Soundness
-    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@0.0.11
+    uses: rnro/github-workflows/.github/workflows/soundness.yml@soundness-matrix
     with:
+      workflows_repository: rnro/github-workflows
+      workflows_ref: soundness-matrix
       license_header_check_project_name: "SwiftNIO"
       docs_check_container_image: "swift:6.3"
       api_breakage_check_enabled: false
